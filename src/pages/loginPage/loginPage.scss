@@ -1,0 +1,107 @@
+@import '../../styles/variables.scss';
+.form_page{
+    // overflow: hidden;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    max-width: 900px;
+    background-color: white;
+    // border: 1px solid $button;
+    border-radius: 30px;
+    box-shadow: $shadow;
+}
+// Левая сторона
+.form_page__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 640px;
+    height: 100%;
+    transition: transform 1.2s ease-in-out;
+    padding: 20px 0;
+    h2{
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+    &-input{
+        display: block;
+        width: 300px;
+        margin: 25px auto;
+        span{
+            font-size: 14px;
+            font-weight: 600px;
+            color: $paragraph;
+            text-transform: uppercase;
+        }
+        input {
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+            font-size: 16px;
+            padding-bottom: 5px;
+            border: none;
+            border-bottom: 1px solid grey;
+            text-align: center;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    &-button{
+        width: 260px;
+        background-color: $button;  
+        color: $button-text;
+            &:hover{
+                background-color: darken($button, 10);
+                box-shadow: $shadow
+            }
+    }
+}
+
+// Правая сторона
+.form_page__sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $button;
+    border-radius: 0 30px 30px 0;
+    // box-shadow:     
+    // inset 10px -10px 10px lighten($background, 30),
+    // inset -10px 10px 10px lighten($button, 37)
+    // ;
+    &-text{
+        color: $background;
+        margin-bottom: 40px;
+    }
+    &-button{
+        width: 200px;
+        padding: 10px;
+        background-color: $background;  
+        color: $button;
+        // 
+            &:hover{
+                color: darken($button, 20);
+                box-shadow: $shadow
+            }
+    }
+}
+
+// Стиль кнопки
+.button{
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    border-radius: 36px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+

@@ -1,0 +1,54 @@
+<header>
+    <span>ЛОГО</span>
+    <div>
+        <input type="text" class="input" placeholder="Поиск...">
+    </div>
+    <div class="avatar">
+        AV
+    </div>
+</header>
+<div class="navigation">
+    <a onclick="goToPage('login')">Login</a>
+    <a onclick="goToPage('registration')">Register</a>
+    <a onclick="goToPage('edit')">Edit</a>
+    <a onclick="goToPage('404')">404</a>
+    <a onclick="goToPage('500')">500</a>
+</div>
+<container>
+    <div class="main">
+        <section class="main__chat-section">
+            <h2>Список чатов</h2>
+            <div class="main__chat-section_list">
+                <ul class="chat-list">
+                    <li class="chat-list__item active">Чат 1</li>
+                    <li class="chat-list__item">Чат 2</li>
+                    <li class="chat-list__item">Чат 3</li>
+                </ul>
+            </div>
+        </section>
+        <section class="main__chat">
+            <div class="main__chat-header">
+                <h3>Название чата</h3>
+                <span></span>
+            </div>
+            <div class="main__chat-field">
+                <div class="message">
+                    <div class="messge__content">
+                        <p class="message__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita illum modi, suscipit alias nobis, neque non magnam dolore quidem nisi sed similique recusandae, architecto maiores dolorem itaque nesciunt distinctio iste?</p>
+                        <span class="message__time">10:11</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="messge__content">
+                        <p class="message__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita illum modi, suscipit alias nobis, neque non magnam dolore quidem nisi sed similique recusandae, architecto maiores dolorem itaque nesciunt distinctio iste?</p>
+                        <span class="message__time">10:11</span>
+                    </div>
+                </div>
+            </div>
+            <div class="main__chat-footer">
+                <input class='input' placeholder="Введите сообщение..." name="message">
+                <button class="button">></button>
+            </div>
+        </section>
+    </div>
+</container>
