@@ -11,5 +11,5 @@ app.use('/*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Запускаемся на порте ${PORT}!`);
+    console.log(`Запускаемся на порте - ${PORT}!`);
 });
