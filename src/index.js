@@ -27,5 +27,5 @@ window.goToPage = function (name) {
 window.addEventListener('DOMContentLoaded', () => {
     const context = { name: 'Jong DOng' };
     const html = create(context);
-    render(ROUTES.edit(html));
+    render(ROUTES.home(html));
 });
