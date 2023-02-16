@@ -1,21 +1,21 @@
 <header>
     <span>ЛОГО</span>
-    <div>
+    <form action="submit">
         <input type="text" class="input" placeholder="Поиск...">
-    </div>
+    </form>
     <div class="avatar">
         AV
     </div>
 </header>
-<div class="navigation">
+<nav class="navigation">
     <a onclick="goToPage('login')">Login</a>
     <a onclick="goToPage('registration')">Register</a>
     <a onclick="goToPage('edit')">Edit</a>
     <a onclick="goToPage('404')">404</a>
     <a onclick="goToPage('500')">500</a>
-</div>
+</nav>
 <container>
-    <div class="main">
+    <main class="main">
         <section class="main__chat-section">
             <h2>Список чатов</h2>
             <div class="main__chat-section_list">
@@ -45,10 +45,10 @@
                     </div>
                 </div>
             </div>
-            <div class="main__chat-footer">
+            <form action="submit" class="main__chat-footer">
                 <input class='input' placeholder="Введите сообщение..." name="message">
                 <button class="button">></button>
-            </div>
+            </form>
         </section>
-    </div>
+    </main>
 </container>

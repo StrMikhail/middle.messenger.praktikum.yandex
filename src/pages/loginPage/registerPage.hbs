@@ -1,14 +1,14 @@
 <header>Лого</header>
-<div class="navigation">
+<nav class="navigation">
     <a onclick="goToPage('login')">Login</a>
     <a onclick="goToPage('home')">Home</a>
     <a onclick="goToPage('edit')">Edit</a>
     <a onclick="goToPage('404')">404</a>
     <a onclick="goToPage('505')">500</a>
-</div>
+</nav>
 <container>
-    <div class="form_page">
-        <div class="form_page__form">
+    <main class="form_page">
+        <form action="submit" class="form_page__form">
             <h2>Регистрация</h2>
             <div class="form_page__form-input">
                 <span>Имя</span>
@@ -35,7 +35,7 @@
                 <input type="phone" name="phone">
             </div>
             <button class="button form_page__form-button">Создать аккаунт</button>
-        </div>
+        </form>
         <div class="form_page__sub">
             <div class="form_page__sub-text">
                 <h2>Уже есть аккаунт?</h2>
@@ -45,5 +45,5 @@
                 Войти
             </button>
         </div>
-    </div>
+    </main>
 </container>
