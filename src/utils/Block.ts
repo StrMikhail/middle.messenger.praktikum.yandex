@@ -1,4 +1,4 @@
-import { EventBus } from './EventBus';
+import { EventBus } from './eventBus';
 import { nanoid } from 'nanoid';
 
 // Нельзя создавать экземпляр данного класса
@@ -125,6 +125,7 @@ class Block<P extends Record<string, any> = any> {
     const newElement = fragment.firstElementChild as HTMLElement;
 
     if (this._element && newElement) {
+      this._removeEvents();
       this._element.replaceWith(newElement);
     }
 
@@ -205,6 +206,15 @@ class Block<P extends Record<string, any> = any> {
       }
     });
   }
+
+  _removeEvents(): void {
+    const {events = {}} = this.props;
+
+    Object.keys(events).forEach((eventName: string) => {
+      this._element!.removeEventListener(eventName, events[eventName]);
+    });
+  }
+
   show() {
     this.getContent()!.style.display = 'block';
   }

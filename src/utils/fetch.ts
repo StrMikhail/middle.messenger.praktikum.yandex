@@ -12,7 +12,7 @@ type Options = {
     data?: Record<string, any>;
   };
 
-
+type HTTPMethod = (url: string, options?: Options) => Promise<unknown>
 
 function queryStringify(data: Record<string, any>) {
 if (typeof data !== 'object') {
@@ -26,23 +26,23 @@ return `${result}${key}=${data[key]}${index < keys.length - 1 ? '&' : ''}`;
 }, '?');
 }
 
+
 class HTTPTransport {
-    get = (url: string, options : Options = {}) => {
-             
-            return this.request(url, {...options, method: METHODS.GET}, options.timeout);
-    };
+        get: HTTPMethod = (url, options = {}) => (
+                this.request(url, {...options, method: METHODS.GET}, options.timeout)
+        )
 
-    post = (url: string, options : Options = {}) => {
-            return this.request(url, {...options, method: METHODS.POST}, options.timeout);
-    };
+        put: HTTPMethod = (url, options = {}) => (
+                this.request(url, {...options, method: METHODS.PUT}, options.timeout)
+        )
 
-    put = (url: string, options : Options = {}) => {
-            return this.request(url, {...options, method: METHODS.PUT}, options.timeout);
-    };
-
-    delete = (url: string, options : Options = {}) => { 
-            return this.request(url, {...options, method: METHODS.DELETE}, options.timeout);
-    };
+        post: HTTPMethod = (url, options = {}) => (
+        this.request(url, {...options, method: METHODS.POST}, options.timeout)
+        )
+        
+        delete: HTTPMethod = (url, options = {}) => (
+        this.request(url, {...options, method: METHODS.DELETE}, options.timeout)
+        )
 
     request = (url: string, options : Options = {}, timeout = 5000) => {
             const {headers = {}, method, data} = options;

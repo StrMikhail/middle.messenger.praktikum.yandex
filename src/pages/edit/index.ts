@@ -63,7 +63,7 @@ export class Edit extends Block {
     });
 //Chatname_______________________________________________________________________________________
     that.input_chatName = new Input({
-        name: 'chat_name',
+        name: 'display_name',
         type: 'text',
         className: 'input__login',
         label: 'Имя в чате',
