@@ -1,0 +1,38 @@
+@import './variables';
+
+
+
+@mixin flex($justify: center, $align: center){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin h-max {
+  height: calc(100vh - $h_header - $h_nav - $margin_bottom);
+
+  // height: 100vh;
+}
+
+@mixin section {
+  overflow: hidden;
+  height: 100%;
+  padding: 1.2rem 0.8rem;
+  border-radius: $border-radius;
+}
+
+@mixin title {
+  font-size: $h2;
+  width: 100%;
+  padding: 0.1rem 0.3rem 1rem;
+}
+
+@mixin box-shadow($color : $secondary) {
+  box-shadow: -3px -3px 10px 0 lighten($color, 25),
+    10px 20px 20px -5px lighten($color, 15);
+}
+
+@mixin blur($color : $dark_button) {
+  background-color: rgba($color, 0.6);
+  backdrop-filter: blur(15px);
+}

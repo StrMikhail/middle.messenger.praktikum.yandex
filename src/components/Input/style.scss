@@ -1,0 +1,74 @@
+@import '../../styles/import.scss';
+
+.input {
+  &__login{
+    display: block;
+    width: 300px;
+    padding: 10px 20px;
+
+    label{
+      font-size: 14px;
+      font-weight: 600px;
+      color: $paragraph;
+      text-transform: uppercase;
+    }
+
+    &__logiv .error{
+      label{
+        color: red;
+      }
+    }
+
+    input {
+      font-size: 18px;
+      font-weight: 100;
+      text-align: center;
+      width: 100%;
+      margin-top: 5px;
+      padding-bottom: 10px;
+      border: none;
+      border-bottom: 1px solid grey;
+
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}
+
+.input__footer{
+
+  color: $paragraph;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  transition: $transition;
+  border: none;
+  background-color: transparent;
+
+  input{
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+
+    &:focus, &:hover{
+      outline: none;
+    }
+  }
+
+  .input__error {
+    color: $background;
+    position: absolute;
+    top: -40px;
+    left: -5%;
+    padding: 10px;
+    border-radius: $border-radius;
+    background-color: $danger;
+    
+  }
+
+  .input__error:empty {
+    display: none;
+  }
+}

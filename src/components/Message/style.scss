@@ -1,0 +1,80 @@
+@import '../../styles/variables';
+
+.message {
+  &__content{
+    // background-color: rgba($button, .8);
+    color: $background;
+    display: grid;
+    align-items: center;
+    max-width: 60%;
+    margin: 0.7rem;
+    padding: 0.7rem;
+    border-radius: $border-radius;
+    background-color: $button;
+    grid-template-columns: 3rem 1fr;
+  }
+
+  &__icon {
+    display: flex;
+
+    // justify-content: s;
+    width: 2.5rem;
+    border-radius: $border-radius;
+  }
+
+  &__text p{
+    font-size: 0.7rem;
+    text-align: justify;
+    align-items: center;
+    margin: 0.5rem;
+  }
+
+  &__time{
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    width: 100%;
+    padding-right: 0.7rem;
+  }   
+}
+
+.my-message {
+  display: flex;
+  justify-content: right;
+
+  &__content{
+    color: $button;
+    position: relative;
+    display: grid;
+    align-items: center;
+    max-width: 70%;
+    margin: 0.7rem;
+    padding: 0.7rem;
+    border: 1px solid $button;
+    border-radius: $border-radius;
+    grid-template-columns: 1fr 3rem;
+  }
+
+  &__icon {
+    grid-column: 2;
+    grid-row: 1;
+    width: 2.5rem;
+    border-radius: $border-radius;
+  }
+
+  &__text p{
+    font-size: 0.7rem;
+    text-align: justify;
+    align-items: center;
+    margin: 0.5rem;
+  }
+
+  &__time{
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    width: 100%;
+    padding-right: 0.7rem;
+  }   
+}

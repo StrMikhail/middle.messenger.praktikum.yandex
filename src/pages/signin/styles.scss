@@ -1,0 +1,67 @@
+@import '../../styles/import';
+
+.signin {
+  // @include flex;
+  display: grid;
+  justify-content: center;
+
+  // max-height: 30rem;
+}
+
+.form-section{
+  @include box-shadow;
+
+  position: relative;
+  display: grid;
+  justify-content: center;
+  padding: 0;
+  border-radius: 30px;
+
+  // max-height: 50%;
+  grid-template-columns: 3fr 1fr;
+
+  &__title{
+    @include title;
+
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__form{
+    @include flex;
+
+    flex-direction: column;
+    width: 640px;
+    height: 100%;
+    padding: 20px 0;
+    transition: transform 1.2s ease-in-out;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+
+  .error{
+    font-size: 0.9rem;
+    color: $danger;
+    position: absolute;
+    bottom: 10%;
+  }
+}
+
+// Правая сторона
+.form-section__right{
+  display: grid;
+  border-radius: 0 $border-radius $border-radius 0;
+  background-color: $button;
+  grid-auto-rows: 1fr auto;
+
+  &__text{
+    @include flex;
+
+    color: $background;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}
+

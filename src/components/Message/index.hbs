@@ -1,0 +1,22 @@
+{{#if myself}}
+    <div class="my-message">
+        <div class="my-message__content">
+            <img class="my-message__icon" src="https://api.dicebear.com/5.x/shapes/svg?seed=Snickers" alt="avatar">
+            <div class="my-message__text">
+                <p>{{ text }}</p>
+                <span class="my-message__time">{{ time }}</span>
+            </div>
+        </div>
+    </div>
+{{ else }}
+    <div class="message">
+        <div class="message__content">
+            <img class="message__icon" src="https://api.dicebear.com/5.x/shapes/svg?seed=Snickers" alt="avatar">
+            <div class="message__text">
+                <p>{{ text }}</p>
+                <span class="message__time">{{ time }}</span>
+            </div>
+        </div>
+    </div>
+{{/if}}
+
