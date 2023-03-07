@@ -22,4 +22,4 @@
 
 ###
 
-<a target="_blank" href="https://deploy-preview-9--sage-beijinho-4557b0.netlify.app/">Netlify</a>
+<a target="_blank" href="https://sage-beijinho-4557b0.netlify.app/">Netlify</a>
