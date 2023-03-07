@@ -1,0 +1,94 @@
+@import './mixins';
+@import './variables';
+
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+}
+
+container, 
+main, 
+section, 
+nav {
+  display: block;
+}
+
+html, body{
+  font-size: clamp(14px, $size, 24px);
+  color: $headline;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: lighten($secondary, 31);
+}
+
+header{
+  height: $h_header;
+}
+
+nav{
+  display: flex;
+  height: $h_nav;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+container{
+  display: grid;
+  grid-template-rows: 10% 7% 80%;
+  height: 100%;
+  margin: 0 2rem;
+}
+
+section{
+  @include section;
+  @include box-shadow;
+    
+}
+
+main{
+  height: 100%;   
+}
+
+header{
+  @include flex(space-between, center);
+
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $headline;
+  text-transform: uppercase;
+    
+  & .avatar {
+    color: $background;
+    padding: 10px;
+    transition: $transition;
+    border-radius: 50%;
+    background-color: $button;
+
+    &:hover{
+      box-shadow: $shadow;
+      background-color: darken($button, 10);
+    }
+  }
+
+  & .input {
+    font-size: 16px;
+    color: $headline;
+    text-align: left;
+    width: 400px;
+    padding: 20px;
+    padding-left: 20px;
+    transition: $transition;
+    border: 1px solid $button;
+    border-radius: $border-radius;
+
+    &:focus, &:hover{
+      box-shadow: $shadow;
+      outline: none;
+    }
+  }
+}
+

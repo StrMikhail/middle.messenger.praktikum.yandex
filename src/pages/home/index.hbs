@@ -1,0 +1,43 @@
+
+<container>
+    <header>
+        <span>ЛОГО</span>
+        <form action="submit">
+            <input type="text" class="input" placeholder="Поиск...">
+        </form>
+        <div class="avatar">
+            {{{ button_avatar }}}
+        </div>
+    </header>
+    {{{ navigation }}}
+    <main class="main">
+        <section class="chat-section">
+            <h2 class="chat-section__title">Список чатов</h2>
+            <div class="chat-section__list">
+                <ul class="chat-section__chats">
+                    {{#each chats_list }}
+                        {{{ this }}}
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+        <section class="messages-section">
+            <h2 class="messages-section__title">Название чата</h2>
+            <div class="messages-section__messages">
+                {{#if messages_list }}
+                        {{#each messages_list }}
+                            {{{ this }}}
+                        {{/each}}
+                    {{ else }}
+                        <div class="messages-section__empty">Список сообщений пуст...</div>
+                {{/if}}    
+            </div>
+            <form  class="messages-section__footer" type="submit">
+                {{{ clip_button }}}
+                {{{ input }}}
+                {{{ button }}}
+            </form>
+        </section>
+        {{{ profile }}}
+    </main>
+</container>

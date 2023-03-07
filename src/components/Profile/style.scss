@@ -1,0 +1,99 @@
+@import '../../styles/import';
+
+
+.modal-profile {
+  @include flex;
+
+  // background: rgba(($button),1);
+  @include blur;
+
+  // display: f;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  animation: showig 0.3s ease;
+  border-radius: 0; 
+}
+
+.profile-content{
+  display: grid;
+
+  // gap: 10px;
+  grid-template-rows: 20px 1fr 60px;
+
+  // color:$background;
+  width: 100%;
+  height: 100%;
+  margin: 0 40px;
+
+  &__user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  &__avatar{
+    display: flex;
+    justify-content: center;
+
+    // align-items: left;
+    img{
+      width: 150px;
+      border: 5px solid $background ;
+      border-radius: 50%;
+    }   
+  }
+
+  &__item{
+    color: $button;
+    display: flex;
+    flex-direction: column;
+
+    // justify-content: space-between;
+    // align-items: c;
+    padding: 10px 20px;
+
+    // color: $background;
+    border-radius: $border-radius;
+    background-color: $background;
+  }
+
+  &__label{
+    font-size: 0.7rem;
+    color: lighten($button, 15);
+  }
+
+  &__info{
+    font-size: 0.9rem;
+    padding-top: 5px;
+  }
+
+  &__footer{
+    @include flex(space-between);
+
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+
+    // position: absolute;
+    // bottom: 30px;
+    // padding: 0 40px;
+    // left: 0;
+  }
+}
+
+@keyframes showig {
+  0%{
+    display: none;
+    transform: translateX(600px);
+  }
+
+  100% {
+    display: flex;
+    transform: translateX(0);
+  }
+}

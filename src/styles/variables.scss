@@ -4,9 +4,14 @@ $paragraph: #5e6b7a;
 $button: #3da9fc;
 $button-text: #fffffe;
 $secondary: #90b4ce;
-$tertiary: #ef4565;
-
-
-$transition: .2s;
+$danger: #ef4565;
+$dark_button: darken($button, 15);
+$margin_bottom: 5vh;
+$border-radius: 30px;
+$transition: 0.2s;
 $shadow: -1px 1px 10px 2px lighten($button, 35),
-1px -1px 10px 2px lighten($button, 22);
+  1px -1px 10px 2px lighten($button, 22);
+$h_header: 10vh;
+$h_nav: 5vh;
+$size: calc(1vh + 1vw);
+$h2: 1.2rem;

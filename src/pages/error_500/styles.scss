@@ -1,0 +1,115 @@
+@import '../../styles/variables';
+
+.form_page{
+  // overflow: hidden;
+  display: grid;
+  justify-content: center;
+  max-width: 900px;
+  box-shadow: $shadow;
+
+  // border: 1px solid $button;
+  border-radius: 30px;
+  background-color: white;
+  grid-template-columns: 2fr 1fr;
+}
+
+// Левая сторона
+.form_page__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 640px;
+  height: 100%;
+  padding: 20px 0;
+  transition: transform 1.2s ease-in-out;
+
+  h2{
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+  }
+
+  &-input{
+    display: block;
+    width: 300px;
+    margin: 25px auto;
+
+    span{
+      font-size: 14px;
+      font-weight: 600px;
+      color: $paragraph;
+      text-transform: uppercase;
+    }
+
+    input {
+      font-size: 16px;
+      text-align: center;
+      display: block;
+      width: 100%;
+      margin-top: 5px;
+      padding-bottom: 5px;
+      border: none;
+      border-bottom: 1px solid grey;
+
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+
+  &-button{  
+    color: $button-text;
+    width: 260px;
+    background-color: $button;
+
+    &:hover{
+      box-shadow: $shadow;
+      background-color: darken($button, 10);
+    }
+  }
+}
+
+// Правая сторона
+.form_page__sub{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 30px 30px 0;
+  background-color: $button;
+
+  &-text{
+    color: $background;
+    margin-bottom: 40px;
+  }
+
+  &-button{  
+    color: $button;
+    width: 200px;
+    padding: 10px;
+    background-color: $background;
+
+    &:hover{
+      color: darken($button, 20);
+      box-shadow: $shadow;
+    }
+  }
+}
+
+// Стиль кнопки
+.button{
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  border-radius: 36px;
+}
+
+

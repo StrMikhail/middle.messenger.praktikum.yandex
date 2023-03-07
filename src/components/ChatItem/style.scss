@@ -1,0 +1,47 @@
+@import '../../styles/import';
+
+
+.chat-item{
+  @include flex(space-between);
+
+  color: $button;
+  position: relative;
+  height: 80px;
+  margin: 20px 0;
+  padding: 30px 10px;
+  transition: $transition;
+  border: 1px solid $button;
+  border-radius: $border-radius;
+
+  &:hover {
+    color: $background;
+    transform: translate(20px);
+    background-color: darken($button, 1);
+  }    
+
+  &:hover > &__unreaded{
+    color: $button;
+    border: 1px solid $button;
+    background-color: $background;
+  }    
+
+  img{
+    width: 60px;
+    height: 60px;
+    border-radius: $border-radius;
+  }
+
+  &__unreaded{
+    color: $button-text;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: $border-radius;
+    background-color: $button;
+  }
+}
