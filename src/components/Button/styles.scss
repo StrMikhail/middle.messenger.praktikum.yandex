@@ -1,0 +1,123 @@
+@import '../../styles/import';
+
+.button {
+  &__classic,
+  &__input,
+  &__danger,
+  &__contrast,
+  &__close,
+  &__clip{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    // height: 100%;
+    transition: $transition;
+    border: none;
+    border-radius: $border-radius;
+
+  }
+
+  &__classic {
+    color: $background;
+    padding: 10px 20px;
+    background-color: $button;
+
+    &:hover{
+      transform: translateY(-5px);
+    }
+  }
+
+  &__input {
+    color: $button-text;
+    padding: 10px 20px;
+    background-color: $button;
+
+    &:hover{
+      background-color: darken($button, 10);
+    }
+
+    &:hover span {
+      transform: translateX(-10px) scale(0.9);
+
+    }
+
+    &:active span{
+      transform: translateX(10px) scale(1.5);
+
+    }
+
+    span {
+      font-size: 30px;
+      transition: $transition;
+
+    }
+  }
+
+  &__clip{
+    color: $button;
+
+    // background-color: $background;
+    background-color: transparent;
+
+    span {
+      font-size: 50px;
+    }
+
+    &:hover{
+      transform: scale(1.2) rotate(30deg);
+    }
+  }
+
+  &__danger{
+    color: $background;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: $danger;
+
+    &:hover{
+      transform: translateY(-5px);
+      background-color: darken($danger, 10);
+    }
+
+  }
+
+  &__contrast{
+    color: $button;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: $background;
+
+    // height: ;
+    &:hover{
+      color: darken($button, 20);
+      transform: translateY(-5px);
+    }
+  }
+
+  &__close{
+    color: $background;
+    width: 40px;
+    transform: translateX(-30px);
+    background-color: transparent;
+
+    span {
+      font-size: 40px;
+      font-weight: 600;
+      transition: $transition;;
+    }
+
+    &:active span{
+      font-size: 80px;
+      transform: rotate(100deg);
+    }
+
+    &:hover span {
+      color: darken($button, 20);
+    }
+  }
+    
+}
+

@@ -1,0 +1,13 @@
+{{#if label}}
+    <div class="{{ className }}">
+        <label for="{{ name }}">{{ label }}</label>
+        <input  type="{{type}}" name="{{ name }}" id="{{ name}}" required="{{ required }}" placeholder="{{ placeholder }}" autocomplete={{ autocomplete }}>
+        <span class="input__error">{{error}}</span>
+    </div>
+
+{{ else }}
+    <div class="{{ className }}">
+        <input  type="{{type}}" name="{{ name }}" id="{{ name }}" required="{{ required }}" placeholder="{{ placeholder }}" autocomplete={{ autocomplete }}>
+        <span class="input__error">{{error}}</span>
+    </div>
+{{/if}}
