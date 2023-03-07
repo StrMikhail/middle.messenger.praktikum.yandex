@@ -1,5 +1,6 @@
-import { EventBus } from './eventBus';
+import { EventBus } from './EventBus';
 import { nanoid } from 'nanoid';
+// import { v4 as makeUUID } from "uuid";
 
 // Нельзя создавать экземпляр данного класса
 class Block<P extends Record<string, any> = any> {
@@ -10,8 +11,11 @@ class Block<P extends Record<string, any> = any> {
     FLOW_RENDER: 'flow:render'
   } as const;
 
-  public id = nanoid(6);
+  // public id = makeUUID();
+    public id = nanoid(6);
+
   protected props: P;
+  
   public children: Record<string, Block | Block[]>;
   private eventBus: () => EventBus;
   private _element: HTMLElement | null = null;
